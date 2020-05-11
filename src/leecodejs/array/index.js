@@ -11,6 +11,18 @@ let removeDuplicates = function(nums) {
     }
     return nums.length;
 };
-export default {
-    "0":removeDuplicates
-}
+
+/**
+ * @param {string} s1
+ * @param {string} s2
+ * @return {boolean}
+ */
+var CheckPermutation = function(s1, s2) {
+    if(s1.length !== s2.length){
+        return false;
+    }else{
+        return Array.from(s1).sort().join("") === Array.from(s2).sort().join("")
+    }
+ };
+ 
+export default [removeDuplicates,CheckPermutation]
