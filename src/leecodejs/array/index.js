@@ -17,7 +17,7 @@ let removeDuplicates = function(nums) {
  * @param {string} s2
  * @return {boolean}
  */
-var checkPermutation = function(s1, s2) {
+let  checkPermutation = function(s1, s2) {
     if(s1.length !== s2.length){
         return false;
     }else{
@@ -25,4 +25,26 @@ var checkPermutation = function(s1, s2) {
     }
  };
  
-export default [removeDuplicates,checkPermutation]
+
+
+ /**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+
+let rotateMatrix = function(matrix) {
+    const n = matrix.length
+    for(let i = 0; i < n; i++) {
+      for(let j = i + 1; j < n; j++) {
+      //   const temp = matrix[i][j]
+      //   matrix[i][j] = matrix[j][i]
+      //   matrix[j][i] = temp
+       matrix[i][j] = matrix[i][j] ^ matrix[j][i]
+       matrix[j][i] = matrix[i][j] ^ matrix[j][i]
+       matrix[i][j] = matrix[i][j] ^ matrix[j][i]
+      }
+      matrix[i] = matrix[i].reverse()
+    }
+  };
+
+export default [removeDuplicates,checkPermutation,rotateMatrix]

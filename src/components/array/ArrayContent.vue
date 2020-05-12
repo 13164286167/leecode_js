@@ -28,6 +28,12 @@ export default {
                     stemTitle:` 判定是否互为字符重排`,
                     stemContent:`给定两个字符串 s1 和 s2，请编写一个程序，确定其中一个字符串的字符重新排列后，能否变成另一个字符串。`,
                     answerCode:String(arrayAnswer[1])
+                },
+                {
+                    id:2,
+                    stemTitle:` 旋转矩阵`,
+                    stemContent:`给你一幅由 N × N 矩阵表示的图像，其中每个像素的大小为 4 字节。请你设计一种算法，将图像旋转 90 度。`,
+                    answerCode:String(arrayAnswer[2])
                 }
             ]
         }
