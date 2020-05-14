@@ -47,4 +47,18 @@ let rotateMatrix = function(matrix) {
     }
   };
 
-export default [removeDuplicates,checkPermutation,rotateMatrix]
+  /**
+ * @param {number[]} nums
+ * @return {number}
+ */
+let singleNumber = function(nums) {
+    return nums.reduce((pre,next)=>{
+        return pre^next
+    })
+    // let res = 0;
+    // for(let i = nums.length-1;i>=0;i--){
+    //     res = res^nums[i]
+    // }
+    // return res;
+};
+export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber]

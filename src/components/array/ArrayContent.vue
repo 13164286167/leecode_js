@@ -34,6 +34,12 @@ export default {
                     stemTitle:` 旋转矩阵`,
                     stemContent:`给你一幅由 N × N 矩阵表示的图像，其中每个像素的大小为 4 字节。请你设计一种算法，将图像旋转 90 度。`,
                     answerCode:String(arrayAnswer[2])
+                },
+                {
+                    id:3,
+                    stemTitle:` 只出现一次的数字`,
+                    stemContent:`给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。`,
+                    answerCode:String(arrayAnswer[3])
                 }
             ]
         }
