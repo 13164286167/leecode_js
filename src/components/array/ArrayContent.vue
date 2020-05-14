@@ -40,6 +40,12 @@ export default {
                     stemTitle:` 只出现一次的数字`,
                     stemContent:`给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。`,
                     answerCode:String(arrayAnswer[3])
+                },
+                {
+                    id:4,
+                    stemTitle:` URL化`,
+                    stemContent:`URL化。编写一种方法，将字符串中的空格全部替换为%20。假定该字符串尾部有足够的空间存放新增字符，并且知道字符串的“真实”长度。`,
+                    answerCode:String(arrayAnswer[3])
                 }
             ]
         }

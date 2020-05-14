@@ -61,4 +61,13 @@ let singleNumber = function(nums) {
     // }
     // return res;
 };
-export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber]
+
+/**
+ * @param {string} S
+ * @param {number} length
+ * @return {string}
+ */
+let replaceSpaces = function(S, length) {
+    return S.slice(0,length).replace(/ /g,"%20");
+};
+export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces]
