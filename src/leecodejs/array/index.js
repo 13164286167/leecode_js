@@ -70,4 +70,28 @@ let singleNumber = function(nums) {
 let replaceSpaces = function(S, length) {
     return S.slice(0,length).replace(/ /g,"%20");
 };
-export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces]
+
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var pivotIndex = function(nums) {
+    let length = nums.length;
+     let sum = 0;
+     for(let i = length - 1; i >= 0; i--){
+         sum += nums[i]
+     }
+     let leftSum = 0;
+     for(let i = 0; i<length; i++){
+         let item = nums[i];
+         if(leftSum === sum - leftSum - item){
+             return i;
+         }
+         leftSum += item;
+         
+     }
+     return -1;
+ };
+ 
+export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces,pivotIndex]

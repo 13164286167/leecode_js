@@ -21,17 +21,20 @@ export default {
                     id:0,
                     stemTitle:`删除排序数组中的重复项`,
                     stemContent:`给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。`,
+                    level:"简单",
                     answerCode:String(arrayAnswer[0])
                 },
                 {
                     id:1,
                     stemTitle:` 判定是否互为字符重排`,
                     stemContent:`给定两个字符串 s1 和 s2，请编写一个程序，确定其中一个字符串的字符重新排列后，能否变成另一个字符串。`,
+                    level:"简单",
                     answerCode:String(arrayAnswer[1])
                 },
                 {
                     id:2,
                     stemTitle:` 旋转矩阵`,
+                    level:"中等",
                     stemContent:`给你一幅由 N × N 矩阵表示的图像，其中每个像素的大小为 4 字节。请你设计一种算法，将图像旋转 90 度。`,
                     answerCode:String(arrayAnswer[2])
                 },
@@ -39,13 +42,22 @@ export default {
                     id:3,
                     stemTitle:` 只出现一次的数字`,
                     stemContent:`给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。`,
+                    level:"简单",
                     answerCode:String(arrayAnswer[3])
                 },
                 {
                     id:4,
                     stemTitle:` URL化`,
+                    level:"简单",
                     stemContent:`URL化。编写一种方法，将字符串中的空格全部替换为%20。假定该字符串尾部有足够的空间存放新增字符，并且知道字符串的“真实”长度。`,
-                    answerCode:String(arrayAnswer[3])
+                    answerCode:String(arrayAnswer[4])
+                },
+                {
+                    id:5,
+                    stemTitle:` 寻找数组的中心索引`,
+                    level:"简单",
+                    stemContent:`给定一个整数类型的数组 nums，请编写一个能够返回数组“中心索引”的方法。\n我们是这样定义数组中心索引的：数组中心索引的左侧所有元素相加的和等于右侧所有元素相加的和。\n如果数组不存在中心索引，那么我们应该返回 -1。如果数组有多个中心索引，那么我们应该返回最靠近左边的那一个。`,
+                    answerCode:String(arrayAnswer[5])
                 }
             ]
         }
