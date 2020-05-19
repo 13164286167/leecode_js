@@ -1,10 +1,6 @@
 <template>
     <div>
-        <Stem :arrayData="arrayData">
-            <div slot="array" slot-scope="slotData">
-                {{slotData.arrayData}}
-            </div>
-        </Stem>
+        <Stem :arrayData="arrayData"></Stem>
     </div>
 </template>
 <script>

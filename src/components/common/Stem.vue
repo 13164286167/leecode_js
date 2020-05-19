@@ -1,18 +1,17 @@
 <template>
     <div class="font24">
         <div v-for="stem in arrayData" :key="stem.id">
-            <h3>{{stem.id+1}}{{stem.stemTitle}}</h3>
-            <h5>{{stem.stemContent}}</h5>
-            <button @click="isShowAnswer">{{showMsg}}</button>
-            <h5 v-show="isShow">{{stem.answerCode}}</h5>
+           <StemContent :content="stem"></StemContent>
         </div>
     </div>
 </template>
 <script>
 import arrayAnswer from "../../leecodejs/array/index"
+import StemContent from "./StemContent"
 export default {
     name:"Stem",
     props:['arrayData'],
+    components:{StemContent},
     mounted(){
         console.log(this.arrayData)
     },
