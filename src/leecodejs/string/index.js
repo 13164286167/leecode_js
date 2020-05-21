@@ -22,4 +22,29 @@ var validPalindrome = function(s) {
     return true;
 };
 
-export default [validPalindrome]
+/**
+ * 解法有瑕疵  双高
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function(s) {
+    let indexs;
+    let length = s.length;
+    let dt = -1;
+    let dp = new Array(length).fill("").map(()=>{
+        return new Array(length).fill(false)
+    })
+    for(let i = 0; i < length; i++){
+        for(let j = 0; j <= i ; j++ ){
+            if((s[i] === s[j])&&(i - j < 2 || dp[j+1][i-1])){
+                dp[j][i] = true;
+                if(i-j > dt){
+                    dt = i - j;
+                    indexs = [j,i+1]
+                }
+            }
+        }
+    }
+    return dt > -1  ? s.slice(indexs[0],indexs[1]) : ""
+};
+export default [validPalindrome,longestPalindrome]
