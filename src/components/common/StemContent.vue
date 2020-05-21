@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name:" StemContent",
+    name:"StemContent",
     props:['content'],
     methods:{
         isShowAnswer(){

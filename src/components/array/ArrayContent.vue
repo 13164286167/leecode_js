@@ -1,6 +1,7 @@
 <template>
     <div>
         <Stem :arrayData="arrayData"></Stem>
+        
     </div>
 </template>
 <script>

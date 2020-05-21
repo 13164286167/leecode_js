@@ -2,6 +2,7 @@
     <div>
         <Stem :arrayData="arrayData">
         </Stem>
+        <router-view></router-view>
     </div>
 </template>
 <script>
