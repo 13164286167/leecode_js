@@ -94,4 +94,29 @@ var pivotIndex = function(nums) {
      return -1;
  };
  
-export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces,pivotIndex]
+
+ /**
+ * @param {number[]} preorder
+ * @param {number[]} inorder
+ * @return {TreeNode}
+ */
+var buildTree = function(preorder, inorder) {
+    // 前序遍历 preorder = [3,9,20,15,7]
+    // 中序遍历 inorder = [9,3,15,20,7]
+    function TreeNode(val) {
+      this.val = val;
+      this.left = this.right = null;
+    }
+    let build = ((inorder) => {
+            if(!inorder || !inorder.length){return null;}
+            let pivot = preorder.shift();
+            let pivotIndex = inorder.indexOf(pivot);
+            let root = new TreeNode(pivot);
+            root.left = build(inorder.slice(0,pivotIndex))
+            root.right = build(inorder.slice(pivotIndex+1))
+            return root;
+        })
+    return build(inorder)
+};
+
+export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces,pivotIndex,buildTree]

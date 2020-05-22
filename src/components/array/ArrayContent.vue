@@ -55,6 +55,13 @@ export default {
                     level:"简单",
                     stemContent:`给定一个整数类型的数组 nums，请编写一个能够返回数组“中心索引”的方法。\n我们是这样定义数组中心索引的：数组中心索引的左侧所有元素相加的和等于右侧所有元素相加的和。\n如果数组不存在中心索引，那么我们应该返回 -1。如果数组有多个中心索引，那么我们应该返回最靠近左边的那一个。`,
                     answerCode:String(arrayAnswer[5])
+                },
+                {
+                    id:6,
+                    stemTitle:` 105.从前序与中序遍历序列构造二叉树`,
+                    level:"中等",
+                    stemContent:`根据一棵树的前序遍历与中序遍历构造二叉树。注意:你可以假设树中没有重复的元素。`,
+                    answerCode:String(arrayAnswer[6])
                 }
             ]
         }
