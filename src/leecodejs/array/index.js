@@ -119,4 +119,48 @@ var buildTree = function(preorder, inorder) {
     return build(inorder)
 };
 
-export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces,pivotIndex,buildTree]
+
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */
+/**
+ * LRUCache
+ * @param {number} capacity
+ */
+class LRUCache {
+    constructor(capacity){
+        this.max = capacity;
+        this.cache = {};
+        this.cacheQueue = [];
+    }
+    get(key){
+        let keyIndex = this.cacheQueue.indexOf(key)
+        if(keyIndex > -1){
+            this.cacheQueue.push(this.cacheQueue.splice( keyIndex,1)[0]);
+            return this.cache[key];
+        }else{
+            return -1;
+        }
+    }
+    put(key,value){
+        let keyIndex = this.cacheQueue.indexOf(key)
+        if(keyIndex > -1){
+            this.cacheQueue.splice(keyIndex,1)
+        }else{
+            if(this.cacheQueue.length >= this.max){
+                delete this.cache[this.cacheQueue.shift()]
+            }
+        }
+        this.cacheQueue.push(key);
+        this.cache[key] = value;
+    }
+}
+
+
+
+
+export default [removeDuplicates,checkPermutation,rotateMatrix,singleNumber,replaceSpaces,pivotIndex,buildTree,LRUCache]
